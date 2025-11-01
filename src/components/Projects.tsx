@@ -1,6 +1,6 @@
 import { ExternalLink, Github } from 'lucide-react';
 
-function Projects() {
+export default function Projects() {
   const projects = [
     {
       title: 'E-Commerce Platform',
@@ -60,7 +60,7 @@ function Projects() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Featured Projects
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-emerald-400 mx-auto rounded-full"></div>
+            <div className="w-20 h-1 bg-linear-to-r from-blue-400 to-emerald-400 mx-auto rounded-full"></div>
             <p className="text-gray-400 mt-6 text-lg">
               A collection of projects showcasing my skills and creativity
             </p>
@@ -78,7 +78,7 @@ function Projects() {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60"></div>
                 </div>
 
                 <div className="p-6">
@@ -129,5 +129,3 @@ function Projects() {
     </section>
   );
 }
-
-export default Projects;
