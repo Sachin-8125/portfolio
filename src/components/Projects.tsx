@@ -3,53 +3,45 @@ import { ExternalLink, Github } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com',
-      live: 'https://example.com'
+      title: 'Credit Score Platform',
+      description: 'A full-stack application to calculate credit score based on the user\'s credit history and financial behavior.',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
+      image: 'https://images.pexels.com/photos/164501/pexels-photo-164501.jpeg',
+      github: 'https://github.com/Sachin-8125/NextScore',
+      live: 'https://next-score-theta.vercel.app/'
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management tool with real-time updates, team workspaces, and progress tracking features.',
+      title: 'Fraud Prevention System',
+      description: 'A system to prevent fraud in the banking system by detecting fraudulent transactions and users.',
       technologies: ['React', 'TypeScript', 'Supabase', 'Tailwind'],
-      image: 'https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com',
-      live: 'https://example.com'
+      image: 'https://images.pexels.com/photos/6266500/pexels-photo-6266500.jpeg/',
+      github: 'https://github.com/Sachin-8125/TrustNet',
+      live: 'https://trust-net-six.vercel.app/'
     },
     {
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for tracking social media metrics with data visualization and performance insights.',
-      technologies: ['Next.js', 'Chart.js', 'MongoDB', 'Express'],
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com',
-      live: 'https://example.com'
+      title: 'Project Lighthouse',
+      description: 'An early-warning system designed to identify students at risk by analyzing academic data and self-reported well-being.',
+      technologies: ['React.js', 'Express.js', 'Neondb', 'Tailwind'],
+      image: 'https://images.pexels.com/photos/28608162/pexels-photo-28608162.jpeg',
+      github: 'https://github.com/Sachin-8125/Project-Lighthouse',
+      live: 'https://project-lighthouse-zeta.vercel.app/'
     },
     {
-      title: 'Weather Forecast App',
-      description: 'Clean and intuitive weather application with location-based forecasts, hourly updates, and weather alerts.',
-      technologies: ['React', 'API Integration', 'CSS3', 'JavaScript'],
-      image: 'https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com',
-      live: 'https://example.com'
+      title: 'Medicine Comparision App',
+      description: 'A web application to compare the prices and availability of medicines in different pharmacies.',
+      technologies: ['React', 'API Integration', 'Tailwind', 'JavaScript'],
+      image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg',
+      github: 'https://github.com/Sachin-8125/MediCompare',
+      live: 'https://medi-compare-steel.vercel.app/'
     },
     {
-      title: 'Blog Platform',
-      description: 'A modern blogging platform with markdown support, comments, tags, and user profiles for content creators.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Redux'],
-      image: 'https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com',
-      live: 'https://example.com'
+      title: 'Skills-Gap Analyzer',
+      description: 'A full-stack web application that helps users identify skill gaps and provides personalized learning roadmaps.',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
+      image: 'https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg',
+      github: 'https://github.com/Sachin-8125/Skills-Gap-Analyzer',
+      live: 'https://skills-gap-analyzer-omega.vercel.app/'
     },
-    {
-      title: 'Portfolio Generator',
-      description: 'A tool that helps developers create beautiful portfolio websites with customizable templates and themes.',
-      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com',
-      live: 'https://example.com'
-    }
   ];
 
   return (
