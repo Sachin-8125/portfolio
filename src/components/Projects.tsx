@@ -3,6 +3,14 @@ import { ExternalLink, Github } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
+      title: 'Google Gemini Clone',
+      description: 'A web application that mimics the functionality of Google Gemini, allowing users to interact with an AI model for various tasks.',
+      technologies: ['React', 'Node.js', 'HTML', 'CSS'],
+      image: 'https://images.pexels.com/photos/30869081/pexels-photo-30869081.jpeg',
+      github: 'https://github.com/Sachin-8125/Gemini-Clone',
+      live: 'https://sachin-8125.github.io/Gemini-Clone/'
+    },
+    {
       title: 'Credit Score Platform',
       description: 'A full-stack application to calculate credit score based on the user\'s credit history and financial behavior.',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
