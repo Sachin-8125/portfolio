@@ -10,7 +10,11 @@ const badgeVariants = {
   hover: { scale: 1.05, y: -2, transition: { duration: 0.2 } }
 };
 
-export default function Skilss(){
+interface SkillsProps {
+  theme: string;
+}
+
+export default function Skilss({ theme: _theme }: SkillsProps) {
   const skills = [
     {
       title: 'Frontend',

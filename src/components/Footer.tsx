@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
-export default function Footer() {
+interface FooterProps {
+  theme: string;
+}
+
+export default function Footer({ theme: _theme }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (

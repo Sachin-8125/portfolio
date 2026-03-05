@@ -6,7 +6,11 @@ const cardVariants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
 };
 
-function About() {
+interface AboutProps {
+  theme: string;
+}
+
+function About({ theme: _theme }: AboutProps) {
   return (
     <section id="about" className="py-20 relative">
       <div className="container mx-auto px-6">

@@ -10,7 +10,11 @@ const iconVariants = {
   hover: { rotate: 360, transition: { duration: 0.3 } }
 };
 
-export default function Projects() {
+interface ProjectsProps {
+  theme: string;
+}
+
+export default function Projects({ theme: _theme }: ProjectsProps) {
   const projects = [
     {
       title: 'Google Gemini Clone',

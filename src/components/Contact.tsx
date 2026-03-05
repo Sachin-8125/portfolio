@@ -12,7 +12,11 @@ const formVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
 
-export default function Contact() {
+interface ContactProps {
+  theme: string;
+}
+
+export default function Contact({ theme: _theme }: ContactProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
