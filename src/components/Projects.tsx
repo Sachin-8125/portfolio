@@ -1,4 +1,14 @@
+import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const iconVariants = {
+  hover: { rotate: 360, transition: { duration: 0.3 } }
+};
 
 export default function Projects() {
   const projects = [
@@ -56,74 +66,110 @@ export default function Projects() {
     <section id="projects" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Featured Projects
             </h2>
-            <div className="w-20 h-1 bg-linear-to-r from-blue-400 to-emerald-400 mx-auto rounded-full"></div>
+            <div className="w-20 h-1 bg-linear-to-r from-teal-400 to-green-400 mx-auto rounded-full"></div>
             <p className="text-gray-400 mt-6 text-lg">
               A collection of projects showcasing my skills and creativity
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.2
+                }
+              }
+            }}
+          >
             {projects.map((project, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 transform hover:scale-105 group"
+                variants={cardVariants}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                className="bg-teal-900/20 backdrop-blur-sm border border-teal-500/30 rounded-xl overflow-hidden hover:bg-teal-900/30 transition-all duration-300 group"
               >
                 <div className="relative overflow-hidden h-48">
-                  <img
+                  <motion.img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60"></div>
+                  <motion.div
+                    className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    initial={false}
+                    whileHover={{ opacity: 1 }}
+                  />
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  <motion.h3
+                    className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors"
+                    whileHover={{ x: 5 }}
+                  >
                     {project.title}
-                  </h3>
+                  </motion.h3>
                   <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech, techIndex) => (
-                      <span
+                      <motion.span
                         key={techIndex}
-                        className="text-xs px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full border border-blue-500/30"
+                        className="text-xs px-3 py-1 bg-teal-600/20 text-teal-400 rounded-full border border-teal-500/30"
+                        whileHover={{ scale: 1.1, backgroundColor: 'rgba(20, 184, 166, 0.3)' }}
+                        transition={{ duration: 0.2 }}
                       >
                         {tech}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
 
                   <div className="flex gap-4">
-                    <a
+                    <motion.a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-gray-300 hover:text-white transition-all duration-300 text-sm flex-1 justify-center"
+                      className="flex items-center gap-2 px-4 py-2 bg-teal-900/20 hover:bg-teal-900/30 border border-teal-500/30 rounded-lg text-gray-300 hover:text-white transition-all duration-300 text-sm flex-1 justify-center"
+                      whileHover="hover"
+                      variants={iconVariants}
                     >
                       <Github className="w-4 h-4" />
                       Code
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white transition-all duration-300 text-sm flex-1 justify-center"
+                      className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 rounded-lg text-white transition-all duration-300 text-sm flex-1 justify-center"
+                      whileHover="hover"
+                      variants={iconVariants}
                     >
                       <ExternalLink className="w-4 h-4" />
                       Live
-                    </a>
+                    </motion.a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
